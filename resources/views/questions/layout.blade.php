@@ -116,9 +116,11 @@
 <div id="wrap" class="grid_1200">
     <header id="header">
         <section class="container clearfix">
-            <div class="logo"><a href="index.html"><img alt=""
-                                                        src="../../images/logo.png"></a>
+            <div class="logo"><a href="index.html"><img alt="" src="../../images/logo.png"></a>
+
+
             </div>
+
 
 
 
@@ -149,6 +151,11 @@
         <noscript><img height="1" width="1" style="display:none"
                        src="https://www.facebook.com/tr?id=27239920976106&amp;ev=PageView&amp;noscript=1"
             /></noscript>
+
+
+        <div class="navbar-nav"  style="align-content: right; padding-left: 80%;">
+            <li><a href= "/logout" >Logout</a></li>
+        </div>
 
     </header><!-- End header -->
 

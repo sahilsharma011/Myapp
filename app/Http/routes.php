@@ -21,9 +21,14 @@ Route::post('/questions/', 'QAController@addQ');
 
 Route::post('/questions/{question}/answers', 'AnswersController@showans');
 
-
 Route::get('answers/{answer}/edit', 'AnswersController@edit');
 
 Route::patch('answers/{answer}', 'AnswersController@update');
 
+Route::get('/', 'UserController@loginview');
 
+Route::post('/signup', 'UserController@signup');
+
+Route::post('/signin', 'UserController@signin');
+
+Route::get('/logout', 'UserController@logout');
