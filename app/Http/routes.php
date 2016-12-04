@@ -4,11 +4,12 @@
 
 
 
-Route::get('/', 'HomeController@home');
+//Route::get('/', 'HomeController@home');
+//
+//Route::get('about', 'HomeController@about');
+//
+//Route::get('/login', 'LoginController@login');
 
-Route::get('about', 'HomeController@about');
-
-Route::get('/login', 'LoginController@login');
 
 Route::get('/questions/', 'QAController@index');
 
@@ -24,3 +25,5 @@ Route::post('/questions/{question}/answers', 'AnswersController@showans');
 Route::get('answers/{answer}/edit', 'AnswersController@edit');
 
 Route::patch('answers/{answer}', 'AnswersController@update');
+
+

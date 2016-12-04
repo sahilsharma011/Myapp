@@ -68,10 +68,23 @@
                             <div class="gallery">
                                 <div class="container">
                                     <form action="/questions/{{ $question->id }}/answers" method="POST" class="form-signin">
-                                        <p><input required type="text" name="body" value="" placeholder="Answer"></p>
+                                        <p><input  type="text" name="body" value="{{ old('body') }}" placeholder="Answer" ></p>
                                         <p><input type="submit" value="Upload" class="btn  btn-primary "/></p>
                                         <input type="hidden"  value="{{ Session::token() }}" name="_token" />
                                     </form>
+
+                                    @if(count($errors))
+                                        <ul>
+
+                                                @foreach($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+
+                                                    @endforeach
+                                        </ul>
+
+
+                                        @endif
+
                                 </div>
                             </div>
 

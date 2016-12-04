@@ -40,7 +40,7 @@ class QAController extends Controller
         //$question->load('answers.user');
 
         $question->load('answers.user');
- 
+
         return view('questions.show', compact('question'));
     }
 

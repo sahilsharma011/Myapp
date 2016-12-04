@@ -12,12 +12,20 @@ class AnswersController extends Controller
 {
     public function showans(Request $request, Question $question){
 
-        $answer = new Answer;
-        $answer->body = $request->body;
-        $question->answers()->save($answer);
+        $this->validate($request, [
+           'body' => 'required|min:10',
+            'email' => 'email|unique:users,email',
+            'cell_no' => 'min:10'
+        ]);
+
+        $answer = new Answer($request->all());
+
+        $question->addAnswer($answer , 1);
 
         return back();
     }
+    
+    
 
     public function edit(Answer $answer){
 
