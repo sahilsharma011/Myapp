@@ -61,7 +61,7 @@ class UserController extends Controller
 
 
 
-        return redirect('questions');
+        return redirect('/');
 
     }
     
