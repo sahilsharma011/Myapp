@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
 class Question extends Model
 {
 
@@ -16,11 +15,10 @@ class Question extends Model
     }
 
     public function addAnswer(Answer $answer , $userID){
-
-        $answer->user_id = $userID; 
+        $answer->user_id = $userID;
         return $this->answers()->save($answer);
-
     }
+
 
     public function path(){
 

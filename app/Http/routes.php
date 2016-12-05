@@ -10,25 +10,37 @@
 //
 //Route::get('/login', 'LoginController@login');
 
+    Route::get('/questions/{question}', 'QAController@show');
 
-Route::get('/questions/', 'QAController@index');
 
-Route::post('/questions/upload', 'QAController@upload');
+    Route::get('/', 'QAController@index')->middleware('auth');
 
-Route::get('/questions/{question}', 'QAController@show');
+    Route::get('/ask', 'QAController@ask');
 
-Route::post('/questions/', 'QAController@addQ');
+    Route::get('/profile' , 'UserController@profile');
 
-Route::post('/questions/{question}/answers', 'AnswersController@showans');
 
-Route::get('answers/{answer}/edit', 'AnswersController@edit');
 
-Route::patch('answers/{answer}', 'AnswersController@update');
 
-Route::get('/', 'UserController@loginview');
 
-Route::post('/signup', 'UserController@signup');
+    Route::get('/login', 'UserController@loginview');
 
-Route::post('/signin', 'UserController@signin');
+    Route::post('/signup', 'UserController@signup');
 
-Route::get('/logout', 'UserController@logout');
+    Route::post('/signin', 'UserController@signin');
+
+
+    Route::post('/questions/upload', 'QAController@upload');
+
+
+    Route::post('/questions/', 'QAController@addQ');
+
+    Route::post('/questions/{question}/answers', 'AnswersController@showans');
+
+
+    Route::get('answers/{answer}/edit', 'AnswersController@edit');
+
+    Route::patch('answers/{answer}', 'AnswersController@update');
+
+    Route::get('/logout', 'UserController@logout');
+

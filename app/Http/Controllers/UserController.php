@@ -2,12 +2,32 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Question;
 
 
 class UserController extends Controller
 {
+
+    public function _construct(){
+
+        $this->middleware('auth');
+    }
+
+    public function profile(){
+
+        $user = Auth::user();
+
+
+        return view('users.profile', compact('user'));
+
+
+
+
+
+    }
+
 
     public function loginview(){
 
@@ -40,7 +60,8 @@ class UserController extends Controller
         $user->save();
 
 
-        return redirect('questions');
+
+        return redirect('/');
 
     }
     
@@ -55,7 +76,8 @@ class UserController extends Controller
 
         if(Auth::attempt(['email' => $request['email'], 'password' => $request['password'] ]))
         {
-            return redirect('questions');
+            
+            return redirect('/');
         }
         return back();
 

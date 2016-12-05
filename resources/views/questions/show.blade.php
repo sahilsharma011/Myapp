@@ -1,3 +1,4 @@
+
 @extends('questions.layout')
 
 @section('show')
@@ -63,7 +64,7 @@
 
                                 </ul>
 
-                                @endforeach
+                            @endforeach
 
                             <div class="gallery">
                                 <div class="container">
@@ -76,14 +77,14 @@
                                     @if(count($errors))
                                         <ul>
 
-                                                @foreach($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
+                                            @foreach($errors->all() as $error)
+                                                <li>{{ $error }}</li>
 
-                                                    @endforeach
+                                            @endforeach
                                         </ul>
 
 
-                                        @endif
+                                    @endif
 
                                 </div>
                             </div>
@@ -104,8 +105,7 @@
 
 
 
-@stop
-
+            @stop
 
 
 

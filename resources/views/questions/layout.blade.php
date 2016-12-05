@@ -116,7 +116,22 @@
 <div id="wrap" class="grid_1200">
     <header id="header">
         <section class="container clearfix">
-            <div class="logo"><a href="index.html"><img alt="" src="../../images/logo.png"></a>
+            <div class="logo"><a href="/"><img alt="" src="../../images/logo.png"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary" style="align-content: center"> <a href= "/" >Home</a></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary" style="align-content: center"> <a href= "/ask" >Ask Question</a></button>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <button class="btn btn-primary" style="align-content: center"> <a href= "/login" >Login/Register</a></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <button class="btn btn-primary" style="align-content: center"> <a href= "/logout" >Logout</a></button>
+
+
+
+
 
 
             </div>
@@ -153,9 +168,7 @@
             /></noscript>
 
 
-        <div class="navbar-nav"  style="align-content: right; padding-left: 80%;">
-            <li><a href= "/logout" >Logout</a></li>
-        </div>
+
 
     </header><!-- End header -->
 
@@ -169,7 +182,9 @@
     </script>
 
 @yield('content')
+
 @yield('show')
+
 </div>
 
 <footer id="footer">
