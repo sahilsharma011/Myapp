@@ -8,14 +8,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Question;
+use Illuminate\Support\Facades\Auth;
 
 class QAController extends Controller
 {
     public function index(){
 
         $questions = Question::all();
-
-
         return view('questions.index', compact('questions'));
     }
 
