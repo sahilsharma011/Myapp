@@ -15,7 +15,13 @@ class QAController extends Controller
 
         $questions = Question::all();
 
+
         return view('questions.index', compact('questions'));
+    }
+
+    public function ask(){
+
+        return view('questions.ask');
     }
 
     public function upload(Request $request, Question $question){
@@ -31,13 +37,14 @@ class QAController extends Controller
 
         $question->save();
 
-        return back();
+        return redirect('/');
 
     }
 
     public function show(Question $question){
 
-        //$question->load('answers.user');
+//        $question = Question::with('answers.user')->find(1);
+
 
         $question->load('answers.user');
 
